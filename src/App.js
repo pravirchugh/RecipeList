@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import IconList from './components/IconList.js'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="introduction">
+        <br></br>
+        <div style={{float: 'right', marginRight: '1.5%'}}>Search: <input type="text" className='sub1' id='searchBar'></input></div>
+        <br></br>
+        <h1 className='sub1' style={{textAlign: "center"}}><b><u>Recipes</u></b> 📖</h1>
+        <h3 style={{marginLeft: "1.5%"}}>Welcome to my Recipe site! Here, I have organized and listed some of my favorite recipes! I hope you enjoy! 😋</h3>
+      </div>
+      
+
+      <IconList></IconList>
+    </>
   );
 }
 
