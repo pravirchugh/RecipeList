@@ -2,13 +2,20 @@ import { Grid } from "@mui/material";
 import React, {useState} from 'react';
 import Icon from './Icon.js';
 import './IconList.css';
+
 const RecipeInfo = [
     {name: "Chicken Tikka", course: "main"},
     {name: "Fettuccine Alfredo", course: "main"},
+    {name: "Grilled Salmon", course: "main"},
     {name: "Quesadillas", course: "main"},
+    {name: "Vegetable Sushi", course: "main"},
+    {name: "BBQ Chicken Pizza", course: "main"},
     {name: "Caesar Salad", course: "side"},
+    {name: "Chips and Homemade Salsa", course: "side"},
+    {name: "French Fries", course: "side"},
     {name: "Pound Cake", course:"dessert"},
     {name: "Flan", course: "dessert"},
+    {name: "Gulab Jamun", course: "dessert"},
 ];
 
 function IconList(){
