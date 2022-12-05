@@ -28,7 +28,7 @@ function search(){
   let text = document.getElementById("searchBar").value;
   let found = false;
   for(let i = 0; i < RecipeInfo.length; i++){
-    if(text == RecipeInfo[i].name){ /* If we have the exact recipe */
+    if(text.toLowerCase() == RecipeInfo[i].name.toLowerCase()){ /* If we have the exact recipe */
       alert("We have this recipe! 😊");
       found = true;
       break;
@@ -42,7 +42,7 @@ function search(){
       
       
       for(let j = 0; j < words.length; j++){
-        if(words[j] == text){ /* If a keyword is present: an example of this is if the user searches for "Fettuccine", we might have the recipe */
+        if(words[j].toLowerCase() == text.toLowerCase()){ /* If a keyword is present: an example of this is if the user searches for "Fettuccine", we might have the recipe */
           alert("We might have this recipe! 🤔");
           found = true;
           break;
