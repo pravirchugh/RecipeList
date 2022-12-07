@@ -41,21 +41,29 @@ function IconList(){
                 <Grid container spacing={3}>
 
                     {RecipeInfo.map((recipe) => (
-                        <Grid item xs={4}>
+                        <Grid item xs={4}>  
                             <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
                                 
                                 <Icon recipe_name={recipe.name} recipe_course={recipe.course}></Icon>
                                 
                                 {(expanded != -1) && (expanded == recipe.index) &&
-                                    <div>
-                                        <p>Test expanded this. {recipe.index}</p>
-                                    </div>                    
+                                
+                                    <p>Test expanded this. {recipe.index}</p>     
                                 }
                             </div>
+                            
+                            {expanded != -1 && recipe.index / 3 == (expanded - (expanded % 3)) / 3 && 
+                            
+                                RecipeInfo[expanded].name
+                            }
+
                         </Grid>
                     ))}
 
+                    {expanded != -1 && RecipeInfo[expanded].name}
+                    
                 </Grid>
+               
             </div>
         </>
     )
