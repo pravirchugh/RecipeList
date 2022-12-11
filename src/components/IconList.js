@@ -72,10 +72,32 @@ function IconList(){
                             </Grid>
                             <>
                                 {expanded != -1 && (recipe.index-2) / 3 == (expanded - (expanded % 3)) / 3 && 
-                                <>
-                                    <br></br>
-                                    <p style={{padding: "5px"}}>{RecipeInfo[expanded].name} " additional placeholder text to see how far the container can hold paragraph based text"</p>
-                                </>
+                                    <div className="recipeIngredientsAndSteps">
+                                        <br></br>
+                                        <p style={{padding: "5px"}}>{RecipeInfo[expanded].name} " additional placeholder text to see how far the container can hold paragraph based text"</p>
+
+                                        {/* This is where the recipe main information needs to be stored, potentially in the following format */}
+                                        <br></br>
+                                        <h3 style={{textAlign: "center"}}>{RecipeInfo[expanded].name}</h3>
+                                        <ul>
+                                            <li>Ingredient 1</li>
+                                            <li>Ingredient 2</li>
+                                            <li>Ingredient 3</li>
+                                            <li>And so on (with measurements included)</li>
+                                        </ul>
+                                        
+                                        <ol> Instructions:
+                                            <li>Step 1</li>
+                                            <li>Step 2</li>
+                                            <li>Step 3</li>
+                                            <li>Step 4</li>
+                                            <li>And so on</li>
+                                        </ol>
+
+                                        <p style={{paddingLeft: "2.5%", paddingRight: "2.5%"}}>Can potentially include pictures of the recipe at major steps and a picture of the final product as well!</p>
+                                        <p style={{textIndent: "2.5%"}}>Potentially adding videos also?</p>
+                                        
+                                    </div>
                                 }
                             </>
                         </>
