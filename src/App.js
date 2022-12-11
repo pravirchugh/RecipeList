@@ -75,6 +75,7 @@ function App() {
         <br></br>
         <h1 className='sub1' style={{textAlign: "center"}}><b><u>Recipes</u></b> 📖</h1>
         <h3 style={{marginLeft: "1.5%"}}>Welcome to my Recipe site! Here, I have organized and listed some of my favorite recipes! I hope you enjoy! 😋</h3>
+        <h4>To revert back to the original screen, click any recipe.</h4>
       </div>
       
 

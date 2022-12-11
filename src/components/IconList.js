@@ -19,17 +19,31 @@ const RecipeInfo = [
     {name: "Flan", course: "dessert", index: 10},
     {name: "Gulab Jamun", course: "dessert", index: 11},
 ];
-
+let nDisplayAtStart = 12;
 function IconList(){
 
     const [expanded, setExpanded] = useState(-1);
+
+   
 
     function handleClick(boxIndex){
 
         if(expanded != -1){
             setExpanded(-1); // minimizes the expanded content
+            nDisplayAtStart = 12;
         } else {
             setExpanded(boxIndex);
+            // nDisplayAtStart should be set to the next highest multiple of 3.
+            nDisplayAtStart = boxIndex;
+            if(nDisplayAtStart % 3 == 1){
+                nDisplayAtStart += 2;
+            } else if(nDisplayAtStart % 3 == 2){
+                nDisplayAtStart++;
+            } else {
+                nDisplayAtStart += 3; // to include the current row as well!
+            }
+            
+            
         }
         
     }
@@ -39,28 +53,74 @@ function IconList(){
      
             <div className="wrapperList">
                 <Grid container spacing={3}>
+                    
+                    {RecipeInfo.slice(0, nDisplayAtStart).map((recipe) => (
+                        <>
+                            <Grid item xs={4}>  
+                                <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
+                                    
+                                    <Icon recipe_name={recipe.name} recipe_course={recipe.course}></Icon>
+                                    
+                                    {/* {(expanded != -1) && (expanded == recipe.index) &&
+                                    
+                                        <p>Test expanded this. {recipe.index}</p>     
+                                    } */}
+                                </div>
+                                
+                                
 
-                    {RecipeInfo.map((recipe) => (
-                        <Grid item xs={4}>  
-                            <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
-                                
-                                <Icon recipe_name={recipe.name} recipe_course={recipe.course}></Icon>
-                                
-                                {(expanded != -1) && (expanded == recipe.index) &&
-                                
-                                    <p>Test expanded this. {recipe.index}</p>     
+                            </Grid>
+                            <>
+                                {expanded != -1 && (recipe.index-2) / 3 == (expanded - (expanded % 3)) / 3 && 
+                                <>
+                                    <br></br>
+                                    <p style={{padding: "5px"}}>{RecipeInfo[expanded].name} " additional placeholder text to see how far the container can hold paragraph based text"</p>
+                                </>
                                 }
-                            </div>
-                            
-                            {expanded != -1 && recipe.index / 3 == (expanded - (expanded % 3)) / 3 && 
-                            
-                                RecipeInfo[expanded].name
-                            }
-
-                        </Grid>
+                            </>
+                        </>
                     ))}
 
-                    {expanded != -1 && RecipeInfo[expanded].name}
+
+                    
+
+
+                    {/* {expanded != -1 && RecipeInfo[expanded].name} */}
+                    
+                </Grid>
+
+                <Grid container spacing={3}>
+                    
+                    {RecipeInfo.slice(nDisplayAtStart, 12).map((recipe) => (
+                        <>
+                            <Grid item xs={4}>  
+                                <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
+                                    
+                                    <Icon recipe_name={recipe.name} recipe_course={recipe.course}></Icon>
+                                    
+                                    {/* {(expanded != -1) && (expanded == recipe.index) &&
+                                    
+                                        <p>Test expanded this. {recipe.index}</p>     
+                                    } */}
+                                </div>
+                                
+                                
+
+                            </Grid>
+                            <>
+                                {expanded != -1 && (recipe.index-2) / 3 == (expanded - (expanded % 3)) / 3 && 
+                                    
+                                RecipeInfo[expanded].name + " additional placeholder text to see how far the container can hold paragraph based text"
+                                }
+                            </>
+                        </>
+                    ))}
+
+
+                    
+
+
+                    {/* {expanded != -1 && RecipeInfo[expanded].name} */}
                     
                 </Grid>
                
