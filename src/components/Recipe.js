@@ -12,7 +12,22 @@ const RecipeInfo = [
     {name: "French Fries", course: "side", index: 8},
     {name: "Pound Cake", course:"dessert", index: 9},
     {name: "Flan", course: "dessert", index: 10},
-    {name: "Gulab Jamun", course: "dessert", index: 11},
+    {name: "Gulab Jamun", course: "dessert", index: 11}
+];
+const IngredientList = [
+    {index: 0, list: ["test"]},
+    {index: 1, list: ["test"]},
+    {index: 2, list: ["test"]},
+    {index: 3, list: ["test"]},
+    {index: 4, list: ["test"]},
+    {index: 5, list: ["test"]},
+    {index: 6, list: ["test"]},
+    {index: 7, list: ["4 medium-sized Roma tomatoes", "A dash of olive oil", "1 diced white onion", "1 jalapeno", "1 teaspoon of salt"]},
+    {index: 8, list: ["A few medium-sized potatoes", "1 quart of vegetable oil", "Salt for seasoning"]},
+    {index: 9, list: ["test"]},
+    {index: 10, list: ["test"]},
+    {index: 11, list: ["test"]},
+    
 ];
 
 function Recipe(props){
@@ -25,10 +40,12 @@ function Recipe(props){
             <br></br>
             <h3 style={{textAlign: "center"}}>{RecipeInfo[props.recipe_idx].name}</h3>
             <ul>
-                <li>Ingredient 1</li>
-                <li>Ingredient 2</li>
-                <li>Ingredient 3</li>
-                <li>And so on (with measurements included)</li>
+                
+                    {IngredientList[props.recipe_idx].list.map((ingredient) => (
+                        <>
+                            <li>{ingredient}</li>
+                        </>
+                    ))}
             </ul>
             
             <ol> Instructions:
