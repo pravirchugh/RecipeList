@@ -15,8 +15,8 @@ const RecipeInfo = [
     {name: "Gulab Jamun", course: "dessert", index: 11}
 ];
 const IngredientList = [
-    {index: 0, list: ["test"]},
-    {index: 1, list: ["test"]},
+    {index: 0, list: ["1/2 cup of greek yogurt", "4 chicken breasts", "2 cloves of garlic", "1 tablespoon of minced ginger", "Lemon juice", "Vegetable oil", "2 tablespoons of Coriander", "Spice mixture, including coriander, turmeric, cumin, paprika, chili powder, cinnamon, salt/pepper and chaat masala"]},
+    {index: 1, list: ["1 medium-sized box of Fettuccine pasta", "1/2 jar of Alfredo sauce", "A dash of parmesan cheese", "A tablespoon of red pepper flakes"]},
     {index: 2, list: ["test"]},
     {index: 3, list: ["test"]},
     {index: 4, list: ["test"]},
