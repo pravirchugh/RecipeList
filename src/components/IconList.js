@@ -71,14 +71,11 @@ function IconList(){
                                 
 
                             </Grid>
-                            <>
-                                {expanded != -1 && (recipe.index-2) / 3 == (expanded - (expanded % 3)) / 3 && 
-                                    <Recipe recipe_idx={expanded}></Recipe>
-                                }
-                            </>
+                            
                         </>
                     ))}
 
+                    
 
                     
 
@@ -86,6 +83,12 @@ function IconList(){
                     {/* {expanded != -1 && RecipeInfo[expanded].name} */}
                     
                 </Grid>
+
+                <>
+                    {expanded != -1 && 
+                        <Recipe recipe_idx={expanded}></Recipe>
+                    }
+                </>
 
                 <Grid container spacing={3}>
                     
@@ -108,7 +111,7 @@ function IconList(){
                             <>
                                 {expanded != -1 && (recipe.index-2) / 3 == (expanded - (expanded % 3)) / 3 && 
                                     
-                                RecipeInfo[expanded].name + " additional placeholder text to see how far the container can hold paragraph based text"
+                                    RecipeInfo[expanded].name + " additional placeholder text to see how far the container can hold paragraph based text"
                                 }
                             </>
                         </>
