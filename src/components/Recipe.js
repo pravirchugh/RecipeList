@@ -34,11 +34,12 @@ function Recipe(props){
     return (
         <div className="recipeIngredientsAndSteps">
             <br></br>
-            <p style={{padding: "5px"}}>{RecipeInfo[props.recipe_idx].name} " additional placeholder text to see how far the container can hold paragraph based text"</p>
+            {/* <p style={{padding: "5px"}}>{RecipeInfo[props.recipe_idx].name} " additional placeholder text to see how far the container can hold paragraph based text"</p> */}
 
             {/* This is where the recipe main information needs to be stored, potentially in the following format */}
             <br></br>
             <h3 style={{textAlign: "center"}}>{RecipeInfo[props.recipe_idx].name}</h3>
+            <h4 style={{textAlign: "left", paddingLeft: "1%", marginBottom: "0px"}}>Ingredients: </h4>
             <ul>
                 
                     {IngredientList[props.recipe_idx].list.map((ingredient) => (
@@ -48,7 +49,8 @@ function Recipe(props){
                     ))}
             </ul>
             
-            <ol> Instructions:
+            <h4 style={{textAlign: "left", paddingLeft: "1%", marginBottom: "0px"}}>Instructions: </h4>
+            <ol>
                 <li>Step 1</li>
                 <li>Step 2</li>
                 <li>Step 3</li>
@@ -56,8 +58,8 @@ function Recipe(props){
                 <li>And so on</li>
             </ol>
 
-            <p style={{paddingLeft: "2.5%", paddingRight: "2.5%"}}>Can potentially include pictures of the recipe at major steps and a picture of the final product as well!</p>
-            <p style={{textIndent: "2.5%"}}>Potentially adding videos also?</p>
+            {/* <p style={{paddingLeft: "2.5%", paddingRight: "2.5%"}}>Can potentially include pictures of the recipe at major steps and a picture of the final product as well!</p>
+            <p style={{textIndent: "2.5%"}}>Potentially adding videos also?</p> */}
             
         </div>
     )
