@@ -3,4 +3,12 @@ html {
 }
 .searchBtn {
   height: max-content;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.sub1 {
+  border-radius: 5px;
+}
+.sub1::placeholder {
+  color: grey;
 }

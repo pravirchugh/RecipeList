@@ -68,7 +68,7 @@ function App() {
         <br></br>
 
         <div style={{float: 'right', marginRight: '1.5%'}}>
-          Search: <input type="text" className='sub1' id='searchBar'></input>
+          Search: <input type="text" className='sub1' id='searchBar' placeholder='Query...'></input>
           <button className="searchBtn" onClick={() => search()}>Enter</button>
         </div>
 
