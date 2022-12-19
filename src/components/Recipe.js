@@ -30,6 +30,21 @@ const IngredientList = [
     
 ];
 
+const InstructionList = [
+    {index: 0, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 1, list: ["Add Fettuccine pasta to boiling water, along with a pinch of salt", "When the pasta is cooked, remove the cooked pasta and add Alfredo sauce", "Add some of the flavorful pasta water to change the sauce's consistency", "Finish with Parmesan cheese and red pepper flakes"]},
+    {index: 2, list: ["Add a splash of olive oil to coat the salmon", "Wrap salmon fillet in aluminum foil and place in oven at 375 degrees Fahrenheit", "Grill for 5 minutes on the first side, then flip and grill 3 minutes on the other side", "Squeeze fresh lemon and lime juice for flavor onto the salmon", "Add salt, pepper, and chaat masala as desired!"]},
+    {index: 3, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 4, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 5, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 6, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 7, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 8, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 9, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 10, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 11, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]}
+];
+
 function Recipe(props){
     return (
         <div className="recipeIngredientsAndSteps">
@@ -51,11 +66,11 @@ function Recipe(props){
             
             <h4 style={{textAlign: "left", paddingLeft: "1%", marginBottom: "0px"}}>Instructions: </h4>
             <ol>
-                <li>Step 1</li>
-                <li>Step 2</li>
-                <li>Step 3</li>
-                <li>Step 4</li>
-                <li>And so on</li>
+                    {InstructionList[props.recipe_idx].list.map((instruction) => (
+                        <>
+                            <li>{instruction}</li>
+                        </>
+                    ))}
             </ol>
 
             {/* <p style={{paddingLeft: "2.5%", paddingRight: "2.5%"}}>Can potentially include pictures of the recipe at major steps and a picture of the final product as well!</p>
