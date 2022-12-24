@@ -35,13 +35,13 @@ const InstructionList = [
     {index: 1, list: ["Add Fettuccine pasta to boiling water, along with a pinch of salt", "When the pasta is cooked, remove the cooked pasta and add Alfredo sauce", "Add some of the flavorful pasta water to change the sauce's consistency", "Finish with Parmesan cheese and red pepper flakes"]},
     {index: 2, list: ["Add a splash of olive oil to coat the salmon", "Wrap salmon fillet in aluminum foil and place in oven at 375 degrees Fahrenheit", "Grill for 5 minutes on the first side, then flip and grill 3 minutes on the other side", "Squeeze fresh lemon and lime juice for flavor onto the salmon", "Add salt, pepper, and chaat masala as desired!"]},
     {index: 3, list: ["Lightly coat the tortillas with butter/oil", "Place a tortilla in a skillet", "When warm, add cheese and continue cooking until melted", "Fold the tortilla and slice", "Repeat this process for all tortillas"]},
-    {index: 4, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 4, list: ["Dice the avocado,carrots,cucumber,and spinach", "Line bamboo rolling paper, add seaweed and sushi rice", "Add avocado, carrots, cucumbers, and spinach evenly throughout", "Roll the bamboo rolling paper, and "]},
     {index: 5, list: ["Roll out pizza dough into the shape of a circular tray", "Add barbecue sauce to pizza dough and spread evenly", "Evenly spread diced red and green peppers as well", "Cook chicken breast in air fryer for eight minutes", "Bake pizza at 375 degrees for 15 minutes", "Add cooked chicken to pizza", "Top with a generous amount of red pepper flakes"]},
     {index: 6, list: ["Add romaine lettuce, cucumber, spinach, croutons, and caesar dressing to bowl", "Toss ingredients together", "Sprinkle parmesan cheese on top", "Add cooked chicken breast, if desired"]},
     {index: 7, list: ["Dice the roma tomatoes", "Slice the jalapeno in thirds", "Now, you may either combine all ingredients into a bowl or add them to a blender for a liquid salsa."]},
     {index: 8, list: ["Wash potatoes and slice them into smaller french fry shapes (around 1/2 inch thick)", "Heat cooking oil in large skillet over medium/high heat", "Add french fries, fry for 10 minutes", "When complete, take fries out of oil and pat with paper towel to remove excess oil", "Season with salt (or other seasonings)"]},
     {index: 9, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
-    {index: 10, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]},
+    {index: 10, list: ["Melt sugar over stove using a non-stick pan", "Beat the eggs in a separate bowl and add remaining ingredients to said bowl", "Combine melted sugar and bowl contents in a baking tray", "Bake mixture for one hour at 350 degrees"]},
     {index: 11, list: ["Step 1", "Step 2", "Step 3", "Step 4", "And so on..."]}
 ];
 
