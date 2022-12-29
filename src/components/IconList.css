@@ -7,3 +7,21 @@
 .recipeListAndSteps {
     display: block;
 }
+
+.courseButton{
+  margin-left: 1%;
+  border-radius: 5px;
+  height: max-content;
+  font-size: 20px;
+}
+
+.courseButton:hover {
+  background-color: rgba(169, 169, 169, 0.5);
+}
+
+.courseButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1%;
+}
