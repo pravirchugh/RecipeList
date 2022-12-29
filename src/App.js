@@ -24,6 +24,9 @@ without too much confusion!
 
 */
 
+let startDisplayIdx = 0;
+let endDisplayIdx = 12;
+
 function search(){
   let text = document.getElementById("searchBar").value;
   let found = false;
@@ -66,7 +69,8 @@ function App() {
     <>
       <div id="introduction">
         <br></br>
-
+      
+        
         <div style={{float: 'right', marginRight: '1.5%'}}>
           Search: <input type="text" className='sub1' id='searchBar' placeholder='Query...'></input>
           <button className="searchBtn" onClick={() => search()}>Enter</button>
@@ -77,7 +81,6 @@ function App() {
         <h3 style={{marginLeft: "1.5%"}}>Welcome to my Recipe site! Here, I have organized and listed some of my favorite recipes! I hope you enjoy! 😋</h3>
         <h4>To revert back to the original screen, click any recipe.</h4>
       </div>
-      
 
       <IconList></IconList>
       
@@ -87,5 +90,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;

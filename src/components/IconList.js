@@ -5,6 +5,8 @@ import Recipe from './Recipe.js';
 import './IconList.css';
 
 let expanded = false;
+let startDisplayIdx = 0;
+let endDisplayIdx = 12;
 
 const RecipeInfo = [
     {name: "Chicken Tikka", course: "main", index: 0},
@@ -22,16 +24,17 @@ const RecipeInfo = [
 ];
 let nDisplayAtStart = 12;
 function IconList(){
-
-    const [expanded, setExpanded] = useState(-1);
-
    
+    const [expanded, setExpanded] = useState(-1);
+    const [startDisplayIdx, setStartDisplayIdx] = useState(0);
+    const [endDisplayIdx, setEndDisplayIdx] = useState(12);
 
     function handleClick(boxIndex){
 
         if(expanded != -1){
             setExpanded(-1); // minimizes the expanded content
-            nDisplayAtStart = 12;
+            nDisplayAtStart = 12; // changed this here (used to be 12)
+           
         } else {
             setExpanded(boxIndex);
             // nDisplayAtStart should be set to the next highest multiple of 3.
@@ -49,13 +52,39 @@ function IconList(){
         
     }
 
+    function all() {
+        setStartDisplayIdx(0);
+        setEndDisplayIdx(12);
+    }
+    function main() {
+        setStartDisplayIdx(0);
+        setEndDisplayIdx(6);
+    }
+    function side() {
+        setStartDisplayIdx(6);
+        setEndDisplayIdx(9);
+       
+    }
+    function dessert() {
+        setStartDisplayIdx(9);
+        setEndDisplayIdx(12);
+    }
+
     return (
         <>
-     
+
+            <div className="courseButtons">
+                <button className="courseButton" onClick={() => all()}>All</button>
+                <button className="courseButton" onClick={() => main()}>Main</button>
+                <button className="courseButton" onClick={() => side()}>Side</button>
+                <button className="courseButton" onClick={() => dessert()}>Dessert</button>
+            </div>
+
             <div className="wrapperList">
                 <Grid container spacing={3}>
                     
-                    {RecipeInfo.slice(0, nDisplayAtStart).map((recipe) => (
+                    {RecipeInfo.slice(startDisplayIdx, Math.min(nDisplayAtStart, endDisplayIdx)).map((recipe) => (
+                        
                         <>
                             <Grid item xs={4}>  
                                 <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
@@ -92,11 +121,10 @@ function IconList(){
 
                 <Grid container spacing={3}>
                     
-                    {RecipeInfo.slice(nDisplayAtStart, 12).map((recipe) => (
+                    {RecipeInfo.slice(Math.min(nDisplayAtStart, endDisplayIdx), endDisplayIdx).map((recipe) => (
                         <>
                             <Grid item xs={4}>  
                                 <div className='recipe' onClick={() => handleClick(recipe.index)}> {/* Make each div have a useState? So that the text goes down a bit and the dish's info is displayed? */}
-                                    
                                     <Icon recipe_name={recipe.name} recipe_course={recipe.course}></Icon>
                                     
                                     {/* {(expanded != -1) && (expanded == recipe.index) &&
