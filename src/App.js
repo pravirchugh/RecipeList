@@ -17,6 +17,8 @@ const RecipeInfo = [
   {name: "Gulab Jamun", course: "dessert"},
 ];
 
+/* Background Image is from Unsplash */
+
 /*
 
 Have three buttons so that customers can immediately choose which course of meal they are looking for! Allows me to include multiple different types of foods and recipes on one site
@@ -86,6 +88,7 @@ function App() {
       
       <br></br>
       <br></br>
+      
       
     </>
   );
