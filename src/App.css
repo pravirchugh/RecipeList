@@ -10,6 +10,9 @@ html {
   border-radius: 3px;
   margin-left: 5px;
 }
+.searchBtn:hover {
+  background-color: lightgrey;
+}
 .sub1 {
   border-radius: 5px;
 }
